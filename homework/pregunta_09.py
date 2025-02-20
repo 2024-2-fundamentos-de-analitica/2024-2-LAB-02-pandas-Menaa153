@@ -23,3 +23,10 @@ def pregunta_09():
     39  39  E   5  1998-01-26  1998
 
     """
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+    df['year'] = df['c3'].apply(lambda x: x.split('-')[0])
+    return df
+
+    
+if __name__ == '__main__':
+    print(pregunta_09())

@@ -21,3 +21,9 @@ def pregunta_03():
     Name: count, dtype: int64
 
     """
+    df = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+    return df["c1"].value_counts().sort_index()
+
+    
+if __name__ == '__main__':
+    print(pregunta_03())

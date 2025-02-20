@@ -20,3 +20,11 @@ def pregunta_13():
     E    275
     Name: c5b, dtype: int64
     """
+    df0 = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+    df2 = pd.read_csv("files/input/tbl2.tsv", sep="\t")
+
+    merged_df = pd.merge(df0, df2, on='c0', how='inner')
+    return merged_df.groupby('c1')['c5b'].sum()
+
+if __name__ == '__main__':
+    print(pregunta_13())
