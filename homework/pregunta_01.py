@@ -16,10 +16,12 @@ def pregunta_01():
     """
 
     # Cargar el archivo tbl0.tsv en un DataFrame
-    df = pd.read_csv('../files/input/tbl0.tsv', sep='\t')
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
     
     # Obtener la cantidad de filas
     return df.shape[0]
 
 # Ejecutar la función y mostrar el resultado
-print(pregunta_01())
+#print(pregunta_01())
+if __name__ == '__main__':
+    print(pregunta_01())
